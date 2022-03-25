@@ -12,8 +12,8 @@ admin.site.register(ContactProfile)
 class ContactProfileAdmin(admin.ModelAdmin):
     list_display = ('id','timestamp','user')
 
-admin.site.register(Testimonals)
-class TestimonalsAdmin(admin.ModelAdmin):
+admin.site.register(Testimonial)
+class Testimonial(admin.ModelAdmin):
     list_display = ('id','name','is_active')
 
 admin.site.register(Media)

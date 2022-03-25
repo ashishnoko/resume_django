@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{% block title %} {% endblock %}</title>
-    <meta name="author" content="Did Coding Limited & James Granger Design">
+    <meta name="author" content=" James Granger Design">
     <link rel="canonical" href="{{request.path}}"/>
     <link rel="home" href="{% url 'home' %}"/>
     <meta name="description" content="{% block description %}{% endblock %}">
@@ -29,12 +29,12 @@
   </head>
   <body>
 
-      {% include 'main/partials/messages.html' %}
-      {% include 'main/partials/nav.html' %}
-      {% block content %}{% endblock %}  
+    {% include 'main/partials/messages.html' %}
+    {% include 'main/partials/nav.html' %}
+    {% block content %}{% endblock %}  
    
   
-      {% include 'main/partials/footer.html' %}
+    {% include 'main/partials/footer.html' %}
 
    
     <!-- ================================

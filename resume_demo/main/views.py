@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render
-from .models import Portfolio,Blog,Testimonals,Certificate
+from .models import Portfolio,Blog,Testimonial,Certificate
 
 
 from django.views import generic
@@ -14,12 +14,12 @@ class IndexView(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        testimonals = Testimonals.objects.filter(is_active=True)
+        Testimonial = Testimonial.objects.filter(is_active=True)
         certificate = Certificate.objects.filter(is_active=True)
         blogs = BlogModel.objects.filter(is_active=True)
         portfolio = Portfolio.objects.filter(is_active=True)
 
-        context["testimonals"]=testimonals
+        context["Testimonial"]=Testimonial
         context["certificate"]=certificate
         context["blogs"]=blogs
         context["portfolio"]=portfolio
